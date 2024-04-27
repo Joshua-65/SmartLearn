@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>smartlearn</title>
+		
+		<!-- ICONSCOUT CDN -->
+		<link rel="stylesheet"
+		href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+		
+		<!-- GOOGLE FONTS (MONTSERRAT) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+		
+		<link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/quiz.css">
+	</head>
+	<body>
+       
+        <main class="main">
+		<nav>
+			<div class="container nav_container">
+				<a href="index.html" class="active"><h4>SMARTLEARN</h4></a>
+				<ul class="nav_menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="courses.html">Topics</a></li>
+                    <li><a href="quizzes.html">Quizzes</a></li>
+					
+				</ul>
+				<button id="open-menu-btn">
+                    <i class="uil uil-bars"></i>
+                </button>
+				<button id="close-menu-btn">
+                    <i class="uil uil-multiply"></i>
+                </button>
+			</div>
+		</nav>
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Goodluck!</h1>
+                    <div class="quiz-header">
+                        <span>Topic 6: Building a Network.</span>
+                        <span class="header-score">Score: 0 / 10</span>
+                    </div>
+
+                    <h2 class="question-text">When is the creation of Ethernet?</h2>
+
+                    <div class="option-list">
+
+                    </div>
+
+                    <div class="quiz-footer">
+                        <span class="question-total">1 of 10 Questions</span>
+                        <button class="next-btn btn">Next</button>
+                    </div>
+                </div>
+                <div class="result-box">
+                    <h2>Quiz Result!</h2>
+                    <div class="percentage-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="score-text">Your Score 0 out of 10</span>
+                    </div>
+                    <div class="buttons">
+                        <button class="tryAgain-btn btn">Try Again</button>
+                        <button class="goHome-btn btn">Go To Home</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home header">
+                <div class="home-content header_left">
+               
+                 <!--   <h1>Hi &#128075;</h1>  -->
+                    <p>
+                        Press the <b>Start Quiz</b> button to start the quiz
+                    </p>
+                    <button class="start-btn btn">Start Quiz</button>
+                </div>
+            </section>
+        </div>
+       </main>
+       <!-- ==============END OF NAVBAR ============= -->
+
+        <div class="popup-info">
+            <h2>Quiz Info</h2>
+            <span class="info">1. Once you press the <b>continue</b> button, there's no going back.</span>
+            <span class="info">2. Once you select your answer, you can't reselect.</span>
+            <span class="info">3. You can't exit from the Quiz while you're playing.</span>
+            <span class="info">4. you'll get points on the basis of your correct answers.</span>
+            <div class="btn-group">
+                <button class="info-btn exit-btn btn">Exit Quiz</button>
+                <a href="#" class="info-btn continue-btn btn">Continue</a>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <script src="quiz3.js"></script>
+        <script src="questions3.js"></script>
+	</body>
+</html>
