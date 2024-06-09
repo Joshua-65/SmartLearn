@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>smartlearn</title>
+		
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+		<!-- ICONSCOUT CDN -->
+		<link rel="stylesheet"
+		href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+		
+		<!-- GOOGLE FONTS (MONTSERRAT) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+		
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="video.css">
+	</head>
+	<body>
+        <nav>
+			<div class="container nav_container">
+				<a href="index.html"><h4>SMARTLEARN</h4></a>
+				<ul class="nav_menu">
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="courses.html">Topics</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="quizzes.html">Quizzes</a></li>
+                    <!--
+	  				<li><a href="contact.html">Contact</a></li>
+                    -->
+				</ul>             
+			</div>
+		</nav>
+		
+        <h3 class="headeng"></h3>
+
+        <div class="container">
+
+            <div class="main-video">
+                <div class="video">
+                    <video src="vid-1.mp4" controls></video>
+                    <h4 class="title">Introduction to Networking | Network Fundamentals Part 1 </h4>
+                </div>
+            </div>
+
+            <div class="video-list">
+                <div class="vid active">
+                    <video src="vid-1.mp4" controls></video>
+                    <h4 class="title">Introduction to Networking | Network Fundamentals Part 1 </h4>
+                </div>
+                <div class="vid">
+                    <video src="vid-2.mp4" controls></video>
+                    <h4 class="title">Introduction to Networking | Different Types of Networks</h4>
+                </div>
+                
+                <div class="vid">
+                    <video src="vid-4.mp4" controls></video>
+                    <h4 class="title">Basic Networking Commands</h4>
+                </div>
+                <div class="vid">
+                    <video src="vid-5.mp4" controls></video>
+                    <h4 class="title">What is Ethernet?</h4>
+                </div>
+                <div class="vid">
+                    <video src="vid-6.mp4" controls></video>
+                    <h4 class="title">Ethernet Cables, UTP vs STP, Straight vs Crossover, CAT 5,5e,6, 7, 8 Network Cables</h4>
+                </div>
+                <div>
+                    <p>Credits to the owner of the videos used in this website.</p>
+                    <a href="https://youtu.be/_NX99ad2FUA?si=4PPs83CNK1msapaB" target="_blank">PowerCert Animated Videos</a>
+                    <a href="https://youtu.be/HLziLmaYsO0?si=aMQfR6ECfLjDm3BL">RealPars</a>
+                    <a href="https://youtu.be/h42qLaQM0_s?si=5X91moMVmWfmCbg_">Network Direction</a>
+                    <a href="https://youtu.be/_IOZ8_cPgu8?si=imY6O6pMqiAldQ7e">IT k Funde</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container footer_container">
+                <div class="footer_1">
+                    <a href="index.html" class="footer_logo"><h4>SMARTLEARN</h4></a>
+                    <p>
+                        A students made website, specifically developed to facilitate the implementation and assessment of computer aided construction (CAI) among the BIT-CT second-year students of Cebu Technological University San Francisco Campus.
+                    </p>
+                </div>
+                <div class="footer_2">
+                    <h4>Permalinks</h4>
+                    <ul class="permalinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Topics</a></li>
+                        <li><a href="video.html">Videos</a></li>
+                        <li><a href="quizzes.html">Quizzes</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer_copyright">
+                <small>Copyright &copy; SMARTLEARN</small>
+            </div>
+        </footer>
+        <!---==============END OF FOOTER==============-->      
+        <script src="main.js"></script>
+        <script src="script.js"></script>
+
+        <script>
+            let listVideo = document.querySelectorAll('.video-list .vid');
+            let mainVideo = document.querySelector('.main-video video');
+            let title = document.querySelector('.main-video .title');
+
+            listVideo.forEach(video =>{
+            video.onclick = () =>{
+            listVideo.forEach(vid => vid.classList.remove('active'));
+            video.classList.add('active');
+            if(video.classList.contains('active')){
+            let src = video.children[0].getAttribute('src');
+            mainVideo.src =src;
+            let text = video.children[1].innerHTML;
+            title.innerHTML = text;
+                  };
+               };
+            });
+        </script>
+	</body>
+</html>
